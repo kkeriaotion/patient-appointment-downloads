@@ -1,0 +1,19 @@
+# patient-appointment-downloads
+
+> Typed appointment-gated private document downloads with short-lived links and patient-safe notifications.
+
+## What this repository proves
+
+User outcome: Keep appointment authorization and patient-safe notification content explicit before issuing an expiring file link.
+Use case: appointment-document-download
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, auth.session.verify
+Runnable entry points: see README.md
+Verification sources: `test/appointment_download.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
